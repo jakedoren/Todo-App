@@ -9,7 +9,7 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
         value: ''
     })
 
-    const submitUpdate = value => {
+    const handleUpdate = value => {
         updateTodo(edit.id, value)
         setEdit({
             id: null,
@@ -18,7 +18,7 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
     }
 
     if (edit.id) {
-        return <TodoForm edit={edit} onSubmit={submitUpdate} />
+        return <TodoForm edit={edit} onSubmit={handleUpdate} />
     }
 
     return todos.map((todo, index) => (
