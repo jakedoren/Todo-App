@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #1d1b1d;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  min-height: 600px;
+  background: #1e9e5e;
+  text-align: center;
+  margin: 120px auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 15px;
+  padding-bottom: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-form {
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #000000;
+  outline: none;
+  width: 310px;
+  background: #f1f1f1;
+  color: black;
+}
+
+.todo-input::placeholder {
+  color: black;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: black;
+  color: #fff;
+}
+
+.todo-input.edit {
+  border: 2px solid #050505;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: black;
+  background: #c1c1c1c1;
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: #f1f1f1;
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: #c1c1c1c1;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: #686668;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: black;
 }
